@@ -1,0 +1,9 @@
+matplotlib==3.3.2
+python-igraph==0.8.3
+networkx==2.2
+open3d==0.16.0
+pymeshlab==2022.2.post2
+rtree==1.0.1
+rospkg==1.4.0
+lxml==4.6.1
+opencv-python==4.6.0.66

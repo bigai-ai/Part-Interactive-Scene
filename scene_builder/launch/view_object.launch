@@ -1,0 +1,16 @@
+<launch>
+    <arg name="object" default="iai_fridge" />
+    <arg name="gui" default="true" />
+    
+    <arg name="urdf_file" value="$(find scene_builder)/output/microwave_0001/microwave_0001.urdf" />
+
+    <arg unless="$(arg gui)" name="joint_state_pub" value="joint_state_publisher" />
+    <arg if="$(arg gui)" name="joint_state_pub" value="joint_state_publisher_gui" />
+
+    <param name="robot_description" textfile="$(arg urdf_file)" />
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    <node name="$(arg joint_state_pub)" pkg="$(arg joint_state_pub)" type="$(arg joint_state_pub)" />
+
+    <node name="view_scene" pkg="rviz" type="rviz" args="-d $(find scene_builder)/rviz/view_object.rviz" />
+</launch>
