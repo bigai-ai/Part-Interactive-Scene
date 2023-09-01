@@ -12,6 +12,7 @@ This repository implements a pipeline that reconstructs interactive indoor scene
 
 - [CAD Replacement and Interactive Scene Generation](assets/USAGES.md)
 
+## [Project Page](https://zeyuzhang.com/papers/2023-iros-part-scene/)
 
 ## Citing
 
